@@ -9,10 +9,12 @@ exports.config = {
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
   specs: [
-    './**/*.feature'
+    './features/*.feature'
   ],
   cucumberOpts: {
-    require: './**/*.steps.js',
+    require:[
+      './features/step_definitions/*.steps.js'
+    ],
     tags: false,
     format: [],
     profile: false,
